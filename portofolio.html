@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<style>
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: poppins, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.hero-header{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #222;
+}
+.wrapper{
+    width: 1200px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header{
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.logo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo i{
+    height: 45px;
+    width: 45px;
+    background-color: #eb6b09ff;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.logo .logo-text{
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+nav .navlinks{
+    list-style-type: none;
+}
+nav .navlinks li{
+    display: inline-block;
+}
+nav .navlinks li a{
+    color: #e5e5e5;
+    margin-right: 2.5rem;
+}
+nav .navlinks li a:hover{
+    color: #f27725ff;
+}
+
+.hero-text{
+    text-align: center;
+    color: #fff;
+    margin-top: 150px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(80deg, #e76119ff, #e42828ff);
+    width: 100%;
+    min-height:  80vh;
+    padding: 5rem 2rem;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-text{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-top: 0;
+    
+}
+
+.hero-text h1{
+    color: #ffee00ff;
+    font-size: 3rem;
+    padding: 5px;
+}
+
+.hero-text p{
+    color: #e5e5e5;
+}
+
+.hero-text a{
+    color: #ffff;
+    padding: 10px;
+}
+
+.btn-group{
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 12px;
+
+}
+
+.btn-group .btn{
+    border: #d5d5d5;
+    color: #ffff;
+    background-color: #f7752fff;
+    padding: 12px 25px;
+    margin: 20px 0;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0/ 78%);
+    margin-right: 0;
+    flex: 0 1 auto;
+    min-width: 140px;
+    text-align: center;
+}
+
+.btn.active{
+    border-color: #ffee00ff;
+}
+
+.hero-text .social i{
+    color: #e5e5e5;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.hero-text .social i:hover{
+    color: #ffee00ff;
+    transform: rotate(360deg);
+}
+
+@media(max-width:930px)
+{
+    nav .togglebtn{
+        display: initial;
+    }
+    .click{
+        top: 45px;
+    }
+
+    .click span{
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child{
+        transform: rotate(-45deg);
+    }
+
+    .click span:nth-child(2)
+    {
+        opacity: 0;
+        margin: 0;
+    }
+
+    click span:last-child{
+        transform: rotate(45deg);
+        top:0;
+    }
+
+    nav.navlinks{
+        position: absolute;
+        top: 110px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+    }
+    nav .navlinks li{
+        display: block;
+    }
+
+    nav .navlinks li a{
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    nav .navlinks.open{
+        right:0;
+    }
+}
+
+@media(max-width:7680x)
+{
+    .container{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    .hero-text{
+        padding:40px 0px;
+    }
+}
+</style>
+<body>
+    <div class="hero-header">
+
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Ailyn Shaffa Khalissa</div>
+                </div>
+                <nav>
+                    <ul class="navlinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="portofolio.html">My Project</a></li>
+                    <li><a href="Contact.html">Contact Me</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+
+            <div class="container">
+                <div class="hero-text">
+                    <h1>My Portofolio</h1>
+                    <hr>
+                    <a href="https://ailynsfk.github.io/Calculator-Project/" target="_blank"><h3>Number Calculator Project</h3></a>
+                    <a href="https://ailynsfk.github.io/Quiz-Project/" target="_blank"><h3>Quizz Project</h3></a>
+                    <a href="https://ailynsfk.github.io/QR-Code-Project/" target="_blank"><h3>QR Code Project</h3></a>
+                    <a href="https://ailynsfk.github.io/Password-Project/" target="_blank"><h3>Password Project</h3></a>
+                    <a href="https://ailynsfk.github.io/Age-Calculator-Project/" target="_blank"><h3>Age Calculator Project</h3></a>
+                    <a href="https://ailynsfk.github.io/ToDoList-Project22/" target="_blank"><h3>To Do List Project</h3></a>
+                    <a href="https://ailynsfk.github.io/DropAndDrag-Project/" target="_blank"><h3>Drop And Drag Project</h3></a>
+                    <a href="https://ailynsfk.github.io/Weather-project/" target="_blank"><h3>Weather Project</h3></a>
+
+                    <div class="btn-group">
+                        <a href="/file/Cv-Ailyn.docx" download="Cv-Ailyn.docx" class="btn">Download Cv</a>
+                        <a href="https://wa.me/6283877222188?text=Halo%20Ailyn%2C%20saya%20tertarik%20dengan%20portofolio%20Anda" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://github.com/AilynSFK" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+    </script>
+</body>
+</html>
